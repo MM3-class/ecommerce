@@ -1,0 +1,509 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+header {
+    display: flex;
+    justify-content: space-between;
+    height: 100px;
+    background-image: radial-gradient(circle,
+    rgba(63, 94, 251, 1) 0%, 
+    rgba(252, 70, 107, 1) 100%);
+    height: 90vh;
+    width: 100%;
+    position: relative;
+}
+.logo img{
+    width: 8rem;
+    margin: 30px 0 0 80px;
+}
+.navigator {
+    margin-top: 30px;
+    margin-left: 600px;
+}
+.navigator li {
+    display: inline;
+    list-style: none;
+}
+.navigator a {
+    text-decoration: none;
+    padding: 0 10px;
+    font-weight: 500;
+    color: #fff;
+}
+.shopping-cart img{
+    width : 1.5rem;
+    margin: 25px 100px 0 0;
+    color: #000;
+    cursor: pointer;
+}
+.banner .banner-main{
+    position: absolute;
+    bottom: 90px;
+    right: 30px;
+    width: 700px
+}
+.explore {
+    position: absolute;
+    bottom: 140px;
+    left: 40px;
+    width: 500px;
+}
+.explore h1 {
+    font-size: 3.2rem;
+}
+.explore p {
+    font-size: 1em;
+    color: #fff;
+    margin: 40px 0;
+    font-weight: 400;
+    width: 600px
+}
+.explore .explore-now {
+    background-color: #ff523b;
+    border-radius: 20px;
+    text-decoration: none;
+    color: #fff;
+    padding: 8px 30px;
+    transition: background-color 0.5s;
+}
+.explore-now:hover {
+    background-color: #563434;
+}
+.models {
+    display: flex;
+}
+.models img:hover {
+    transform: rotateY(180deg);
+}
+.models img {
+    margin: 60px auto;
+    width: 350px;
+    height: 420px;
+    transition: transform 2s;
+}
+.products-display, .brand-title {
+    margin: 90px 0;
+    text-align: center;
+    font-weight: 900;
+    font-size: 1.8em;
+    position: relative;
+    color: #555;
+}
+.products-display::after, .brand-title::after {
+    content: "";
+    border-bottom: 5px solid #ff523b;
+    border-radius: 10px;
+    width: 80px;
+    position: absolute;
+    margin: 10px auto;
+    top: 35px;
+    left: 47%;
+}
+
+/*------CSS Flex-------*/
+.products {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+.product {
+    transition: transform .7s;
+    cursor: pointer;
+    margin: 20px 0;
+}
+.product:hover {
+    transform: translateY(-12px);
+}
+.products .rating, .brand-new .rating, .social .rating {
+    color: #ff523b;
+}
+.product img{
+    width: 290px;
+    height: 390px;
+}
+.subtitle, .subtitle-brand {
+    color: #555;
+    font-weight: 600;
+    padding: 10px 0
+}
+
+/*------CSS Grid------*/
+.brand-new {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    justify-content: space-between;
+    margin: 0 60px;
+}
+.brand-new img {
+    width: 290px;
+}
+.brand-new .brand {
+    margin-bottom: 70px;
+    cursor: pointer;
+    transition: filter, transform .7s;
+}
+.brand-new .brand:hover {
+    filter: contrast(110%);
+    transform: translateY(6px);
+}
+.ad img {
+    animation: rotation 10s  0.5s infinite linear both;
+}
+@keyframes rotation {
+    0% {
+        transform: rotate3d(0, 0, 0, 0);
+    }
+    100% {
+        transform:  rotate3d(0, 1, 0, 360deg);
+    }
+}
+.ad {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 20px;
+    background-image: radial-gradient(circle,
+    rgba(63, 94, 251, 1) 0%, rgba(252, 70, 107, 1)100%);
+}
+.ad h5 {
+    font-weight: 100;
+    font-size: 1.2em;
+    color: #fff;
+    margin-bottom: 30px;
+}
+.ad h1 {
+    font-weight: 800;
+    font-size: 2.5em;
+    margin-bottom: 30px;
+}
+.ad p {
+    letter-spacing: 1px;
+    line-height: 1.5;
+    color: #fff;
+    margin-bottom: 30px;
+}
+.ad a {
+    height: 50px;
+    width: 110px;
+    background-color: #ff523b;
+    color: #fff;
+    border-radius: 20px;
+    padding: 8px 30px;
+    text-decoration: none;
+    transition: background-color 0.5s;
+}
+.ad a:hover {
+    background-color: #563434;
+}
+.ad > div {
+    padding: 0 100px;
+}
+.social-personnel {
+    display: flex;
+    justify-content: space-between;
+    margin: 70px;
+}
+.social-personnel > div {
+    margin: 50px 20px
+}
+.social-personnel .social-person {
+    border: none #fff;
+    border-radius: 10px;;
+    padding: 40px 10px;
+    text-align: center;
+    box-shadow: 0 0 20px 0  rgb(0, 0, 0, 0.1);
+    transition: transform 0.9s ;
+}
+.social-personnel .social-person:hover {
+    transform: translateY(-8px);
+}
+.social-img img {
+    border-radius: 50%;
+    width: 50px;
+    margin-top: 20px;
+}
+.social-personnel .fa-quote-left {
+    font-size: 35px;
+    color: #ff523b;
+    padding-bottom: 20px ;
+}
+.social-personnel p {
+    color: #777
+}
+.social-personnel h3 {
+    color: #333
+}
+.sponsor {
+    display: flex;
+    justify-content: space-around;
+    filter: grayscale(0%);
+    margin: 30px 0;
+}
+.sponsor-logo img {
+    cursor: pointer;
+    width: 160px;
+}
+.sponsor-logo img:hover {
+    filter: grayscale(100%);
+}
+footer {
+    background-color: #000;
+    margin: 90px 30px 0 30px;
+}
+.footer-head {
+    display: grid;
+    grid-template-columns: 30% 40% 15% 15%;
+    justify-content: space-evenly;
+    color: #fff;
+    padding: 60px 0px; 
+    width: 100%;
+    position: relative;
+}
+.footer-head::after {
+    content: "";
+    border-top: 1px solid #fff;
+    width: 90%;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    margin: 60px auto;
+}
+.our-app {
+    padding-left: 20px;
+}
+.our-app img{
+    width: 150px;
+}
+.our-app h3 {
+    margin-bottom: 25px;
+}
+.our-app p {
+    color: #777;
+}
+.flag img {
+    width: 400px;
+    margin-bottom: 30px;
+}
+.flag {
+    width: 450px
+}
+.flag p{
+    line-height: 1.5;
+    color: #777;
+}
+.links, .follow-us {
+    width: 140px;
+}
+.links h3, .follow-us h3 {
+    margin-bottom: 25px;
+}
+.links li, .follow-us li {
+    list-style: none;
+    padding: 7px 0;
+}
+.links a, .follow-us a {
+    text-decoration: none;
+    color: #777;
+}
+.links a:hover, .follow-us a:hover {
+    color: #fff;
+}
+.footer-head span {
+    bottom: 25px;
+    position: absolute;
+    text-align: center;
+    width: 100%;
+    color: #777;
+}
+header .icon-bar  {
+    width: 30px;
+    position: absolute;
+    right: 20px;
+    top:20px;
+    display: none;
+}
+
+@media screen and (max-width: 768px) {
+    body {
+        width: 100vw;
+        font-size: 1rem;
+        overflow-x: hidden;
+    }
+    header {
+        width: 100vw;
+        display: flex;
+        flex-direction: column;
+        overflow: hidden;
+    }
+
+    header .logo img{
+        float: left;
+        margin: 20px;
+        position: absolute;
+        width: 25%;
+    }
+    .explore {
+        transform: translateX(0%);
+        transition: transform .7s ease-in;
+    }
+    .explore-hide {
+        transform: translateX(-100%);
+    }
+    .explore h1{
+        font-size: 1.8rem;
+    }
+    .explore p, h1 {
+        width: 65vw;
+    }
+    .shopping-cart {
+        top: 0;
+        position: absolute;
+        right: 0;
+    }
+    header .icon-bar {
+        display: block;
+        cursor: pointer;
+        padding: 5px 50px 0 0;
+        font-size: 25px;
+    }
+    .navigator {
+        position: absolute;
+        top: 40px;
+        right: 0;
+        background-image: radial-gradient(circle,
+        rgba(63, 94, 251, 1) 0%, 
+        rgba(252, 70, 107, 1)100%);
+        width: 100%;
+        height: 85%;
+        flex-direction: column;
+        display: flex;
+        transform: translateX(100%);
+        transition: transform .7s ease-in;
+    }
+    .nav-active {
+        transform: translateX(0%);
+    }
+    .navigator li {
+        display: block;
+        text-align: center;
+        margin: auto 0;
+    }
+    .navigator a {
+        line-height: 2;
+        color: #fff;
+    }
+    .navigator a:hover {
+        color: #ff523b;
+        transition: color .3s ;
+    }
+    .banner {
+        display: none;
+    }
+    .models, .products, .brand-new, .social-personnel {
+        display: block;
+        text-align: center;
+    }
+    .sponsor {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .ad {
+        display: block;
+        height: 100%;
+        padding-bottom: 30px ;
+    }
+    .ad img {
+        width: 100%;
+    }
+    .footer-head {
+        padding:  20px;
+        display: flex;
+        justify-content: center;
+        height: 65vh;
+    }
+    .our-app p{
+        display: none;
+    }
+    .flag, .links, .follow-us {
+        width: 100%;
+        padding: 0 20px;
+    }
+    .flag img, .flag p {
+        display: none;
+    }
+}
+@media screen and (max-height: 455px) {
+    .explore {
+        position: absolute;
+        bottom: 50px;
+        font-size: 10px;
+    }
+    .explore h1 {
+        display: block;
+    }
+    .explore p {
+        font-size: .7rem;
+    }
+}
+@media screen and (max-height: 555px) {
+    .banner .banner-main {
+        width: 600px;
+    }
+}
+@media screen and (min-width: 769px ) and (max-width: 1279px) {
+    body {
+        width: 100vw;
+    }
+    .explore p, h1 {
+        display: none;
+    }
+    .navigator {
+        margin: 30px auto;
+    }
+
+    .shopping-cart img{
+        display: none;
+    }
+    .models {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .brand-new, .products {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .flag, .flag img {
+        width: 80%;
+    }
+    .footer-head .follow-us {
+        margin: 20px ;
+    }
+    .explore-now {
+        position: absolute;
+        height: 40px;
+        width: 180px;
+    }
+    .ad .watch-topic {
+        padding: 40px 20px;
+    }
+    .ad .watch img {
+        width: 300px;
+        height: 300px;
+    }
+}
+@media screen and (max-width: 480px) {
+    .footer-head {
+        background-color: #fff;
+        border: 0 solid #fff;
+        font-size: .8rem;
+        color: #000;
+    }
+    .footer-head .links a, .follow-us a {
+        color:#000
+    }
+}
+
