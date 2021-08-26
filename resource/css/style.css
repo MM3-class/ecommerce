@@ -437,6 +437,9 @@ header .icon-bar  {
     }
 }
 @media screen and (max-height: 455px) {
+    .banner .banner-main {
+        display: none;
+    }
     .explore {
         position: absolute;
         bottom: 50px;
@@ -447,11 +450,6 @@ header .icon-bar  {
     }
     .explore p {
         font-size: .7rem;
-    }
-}
-@media screen and (max-height: 555px) {
-    .banner .banner-main {
-        width: 600px;
     }
 }
 @media screen and (min-width: 769px ) and (max-width: 1279px) {
