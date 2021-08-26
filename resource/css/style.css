@@ -360,15 +360,15 @@ header .icon-bar  {
         width: 65vw;
     }
     .shopping-cart {
-        top: 0;
         position: absolute;
-        right: 0;
+        right: 40px;
     }
     header .icon-bar {
         display: block;
         cursor: pointer;
         padding: 5px 50px 0 0;
         font-size: 25px;
+        width: 70px;
     }
     .navigator {
         position: absolute;
